@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio</title>
+</head>
+
+<body>
+	<h1> This is a validation of radio Button.</h1>
+	<form name="New" action="#" onclick="return valid_radio()">
+		<h2>Select The Gender</h2>
+		Male<input type="radio" name="A" value="Male"/ >
+		Female<input type="radio" name="A" value="Female" />
+		Other	<input type="radio" name="A" value="Other" />
+		<div id="Message">
+			<p>
+				
+			</p>
+		<button>Submit</button>
+		</div>
+
+
+	</form>
+	<script type="text/javascript">
+	valid_radio()
+	{
+		var r = document.New.A;
+		for(i=0; i < r.length; i++)
+		{
+			if(r[i].checked == true )
+				return true;
+		}
+		
+	}
+		document.getElements("Message").innerHTML ="Please select any Option";
+		return false;
+
+
+
+
+
+</script>
+</body>
+</html>
